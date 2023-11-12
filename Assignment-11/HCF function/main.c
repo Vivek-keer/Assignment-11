@@ -16,7 +16,7 @@ int HCF(int a,int b)
     while(n>=1)
         {
             if(a%n==0&&b%n==0)
-              r=r*n; break;
+            { r=r*n; break;}
             else n--;
         }
         return r;
