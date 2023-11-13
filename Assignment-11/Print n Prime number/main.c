@@ -1,27 +1,27 @@
 #include <stdio.h>
-void nprim(int );
+#include <stdlib.h>
+void nprime(int);
 int main()
 {
-    int n;
-    printf("Enter the number: "); scanf("%d",&n);
-
-      nprim(n);
+    int a;
+    printf("Enter the number \n");
+    scanf("%d",&a);
+    nprime(a);
     return 0;
 }
- void nprim(int x)
+void nprime(int count)
 {
-    int a,n,count;
-    for(a=1,count=0;count<=x;a++)
+    int n,h,r;
+    for(n=2,r=0;r<count;n++)
     {
-        for(n=a/2;n>0;n--)
-      {
+        h=n/2;
+        while(h>1)
 
-        if(n==1) { printf("  %d  ",a); count++; break; }
-        else if(a%n==0) break;
-      }
-
+            if(n%h==0) break;
+            else h--;
+        if(h==1)
+        {
+                   printf("%d ",n); r++;
+        }
     }
 }
-
-
-
